@@ -33,9 +33,18 @@ public class Login implements Initializable {
 
     @FXML
     private AnchorPane loginPane;  // Az FXML fájlban beállított fx:id
-    String loggedInUserId;
+    //String loggedInUserId;
 
-    private boolean login() throws SQLException {
+    /*private Main mainController;
+
+    public Login(Main mainController) {
+        this.mainController = mainController;
+    }
+    public Login() {
+
+    }*/
+
+    public boolean login() throws SQLException {
         connection = dbHandler.getConnection();
         String connect = "SELECT id FROM FELHASZNALOK where felhasznalonev = '"
                 + textfield_username.getText() + "' and jelszo = '" + passwordfield.getText() + "';";
@@ -43,8 +52,13 @@ public class Login implements Initializable {
             ResultSet set = connection.createStatement().executeQuery(connect);
             while (set.next()) {
                 if (set.getInt(1) > 0) {
-                    loggedInUserId = set.getString(1);
-                    System.out.println(loggedInUserId);
+                    //loggedInUserId = set.getString(1);
+
+                    //mainController.setLoggedInUserId(set.getInt(1));
+                   /* btn_login.getScene().getWindow().hide();
+                    ViewModel.getInstance().getViewFactory().showMainWindow();*/
+
+                    //System.out.println(loggedInUserId);
                     return true;
                 }
             }
@@ -61,7 +75,7 @@ public class Login implements Initializable {
         try {
             if (login()) {
                 // Ha a belépés sikeres, hozz létre egy példányt a Main osztályból és adj át neki a felhasználónevet
-                Main mainController = new Main(loggedInUserId);
+                Main mainController = new Main();
                 btn_login.getScene().getWindow().hide();
                 ViewModel.getInstance().getViewFactory().showMainWindow(loginPane, mainController);
             }

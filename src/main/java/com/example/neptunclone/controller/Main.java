@@ -17,9 +17,16 @@ import java.sql.SQLException;
 public class Main {
 
     @FXML
-    private TableView<Course> targytable;
+    public TableView<Course> targytable;
     private String loggedInUser;
     private static Connection connection;
+
+   /* private int loggedInUserId;
+
+    public void setLoggedInUserId(int loggedInUserId) {
+        this.loggedInUserId = loggedInUserId;
+    }
+
 
     public Main() {
     }
@@ -27,12 +34,12 @@ public class Main {
     public Main(String loggedInUser) {
         this.loggedInUser = loggedInUser;
     }
-
+*/
 
     public void initialize() {
         // Inicializálj egy példa felhasználót
-        //int userId = 1;
-        System.out.println(loggedInUser);
+        int userId = 1;
+        System.out.println(userId);
 
         // Tárgyak listája
         ObservableList<Course> courses = FXCollections.observableArrayList(

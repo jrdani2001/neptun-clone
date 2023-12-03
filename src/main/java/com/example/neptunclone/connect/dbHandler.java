@@ -48,4 +48,7 @@ public class dbHandler {
         }
         return connected;
     }
+
+    public static void setConnection(Connection mockConnection) {
+    }
 }
