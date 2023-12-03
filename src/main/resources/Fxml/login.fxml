@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.neptunclone.controller.Login">
+   <Label layoutX="167.0" layoutY="68.0" prefHeight="17.0" prefWidth="267.0" text="User name">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="167.0" layoutY="170.0" prefHeight="17.0" prefWidth="267.0" text="Password">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Button fx:id="btn_login" layoutX="208.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnLoginAction" prefHeight="25.0" prefWidth="185.0" text="Login">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <TextField fx:id="textfield_username" layoutX="167.0" layoutY="113.0" prefHeight="25.0" prefWidth="267.0" promptText="username" />
+   <TextField fx:id="passwordfield" layoutX="167.0" layoutY="213.0" prefHeight="25.0" prefWidth="267.0" />
+</AnchorPane>

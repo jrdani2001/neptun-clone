@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.neptunclone.controller.Main">
+   <children>
+      <TableView fx:id="targytable" layoutX="50.0" layoutY="137.0" prefHeight="350.0" prefWidth="700.0">
+        <columns>
+            <!--
+          <TableColumn prefWidth="350.0" text="Tárgyak" />
+          <TableColumn prefWidth="360.0" text="Gombok" />
+          -->
+        </columns>
+      </TableView>
+      <Label layoutX="50.0" layoutY="37.0" prefHeight="17.0" prefWidth="290.0" text="Tárgyak felvétele">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
